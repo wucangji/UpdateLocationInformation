@@ -16,24 +16,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     //set the minor value of each beacons blueberry-> ice->mint
     
-//    let blueberry = 55134
-//    let ice = 11111
-//    let mint= 47794
-    
 //    let blueberry = 6857
 //    let ice = 44858
 //    let mint = 12611
     
     let colors = [
         55134 : UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),
-        44858: UIColor(red: 142/255, green: 212/255, blue: 220/255, alpha: 1),
+        51091: UIColor(red: 142/255, green: 212/255, blue: 220/255, alpha: 1),
         47794: UIColor(red: 162/255, green: 213/255, blue: 181/255, alpha: 1)
     ]
     
     let ibeaconColorMap = [
-        6857:"Location01",
-        44858:"Location02",
-        12611:"Location03"
+        55134:"Location01",
+        51091:"Location02",
+        47794:"Location03"
     ]
     
     override func viewDidLoad() {
