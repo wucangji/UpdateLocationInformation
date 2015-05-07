@@ -20,9 +20,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
 //    let ice = 11111
 //    let mint= 47794
     
-    let blueberry = 6857
-    let ice = 44858
-    let mint = 12611
+//    let blueberry = 6857
+//    let ice = 44858
+//    let mint = 12611
     
     let colors = [
         55134 : UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),
