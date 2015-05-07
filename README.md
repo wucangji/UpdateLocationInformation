@@ -6,6 +6,8 @@ Introduction
 use beacons to represent locations, if a phone is close to each one, the beacons can tell where the phone is, in our example, the if the phone is close to beacon1, then we send Location01 to the certain place in the server, to let the server know that the user(phone) latest location.
 We update the location information each second. 
 
+* short demo
+https://app.box.com/s/0hrkvlqcx8gch9oz7klvvvuegcr37tt2
 
 
 ### Usage
