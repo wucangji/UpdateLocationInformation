@@ -18,3 +18,7 @@ https://www.youtube.com/watch?v=w_BbK00SyAw&feature=youtu.be
 * Connect your iphone to your mac, make sure you use the developer account in the preference ->account settings. 
 * According to your server setting, Make sure your phone is using Cisco's wifi and bluetooth is open.
  
+ 
+ * Use "flip to sleep" mode of the estimote ibeacon to enhance the accurancy.
+ https://community.estimote.com/hc/en-us/articles/205413787-How-to-enable-conditional-broadcasting-and-Flip-to-sleep-mode-
+ 

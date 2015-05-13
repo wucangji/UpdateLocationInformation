@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        
+        
+        // initialize parse sdk
+        Parse.setApplicationId("xbaiObrF1GVqADuNupq8ZwlsvCOZzEF3R3hGHeIP",
+            clientKey: "iNelJa0HXPWm9DhxLTWUfne0FhDeqXKcpqTVu4PI")
+        
+        
         return true
     }
 
