@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import Parse
+
 
 class ViewController: UIViewController, CLLocationManagerDelegate{
 
@@ -21,6 +23,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     var ibeaconColorMap = [Int:String]()
     
     @IBOutlet weak var ChangeLabel: UILabel!
+    
+    
+    
+    @IBAction func logoutButtonTouched(sender: AnyObject) {
+        PFUser.logOut()
+        performSegueWithIdentifier("showLoginView", sender: self)
+    }
       //Lionel's beacons + Cangji's beacons
 //    let colors = [
 //        55134 : UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),

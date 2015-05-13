@@ -8,7 +8,7 @@
 //
 
 import Foundation
-
+import Parse
 
 class SwiftPostman {
     
@@ -261,7 +261,7 @@ class SwiftPostman {
             
             // deserialize json object
             if data == nil{
-                println("Do not receive any response")
+                println("Do not receive any response in creating contentInstance")
                 
             }else{
                 let json = JSON(data: data)

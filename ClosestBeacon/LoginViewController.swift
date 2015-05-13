@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -16,7 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var username: UITextField!
     @IBOutlet var password: UITextField!
     
-    @IBOutlet weak var enterButton: UIButton!
+    @IBOutlet var enterButton: UIButton!
     
     var signUpActive = true
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
@@ -39,22 +40,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     
     // skip the login view of the user is the current the user
-//    override func viewDidAppear(animated: Bool) {
-//        // get current user cached on disk
-//        var currentUser = PFUser.currentUser()
-//        if currentUser != nil {
-//            // go to table segue
-//            self.performSegueWithIdentifier("showChooseBeacon", sender: self)
-//        } else {
-//            // wait for signup/login
-//        }
-//    }
+    override func viewDidAppear(animated: Bool) {
+        // get current user cached on disk
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            // go to table segue
+            self.performSegueWithIdentifier("showChooseBeacon", sender: self)
+        } else {
+            // wait for signup/login
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        // hide nar bar
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        // show nav bar
+        self.navigationController?.navigationBarHidden = false
+    }
 
     @IBAction func signupButtonToggled(sender: AnyObject) {
         if (signUpActive == false) {
@@ -141,7 +154,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         NSLog("Signed Up.")
                         
                         // initializes all required containers for new user
-                        SwiftPostman().createNewUserContainer()
+                        //SwiftPostman().createNewUserContainer()
                         
                         // go to table segue
                         self.performSegueWithIdentifier("showChooseBeacon", sender: self)
